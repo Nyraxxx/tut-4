@@ -188,13 +188,14 @@ main_loop:
     // if r16 != 0, branch somewhere
     // if r16 == 0, branch will fail and next line will execute
     rjmp on
-    on:
-        sts PORTB_OUTCLR, r17
-      
-    off:
+off:
         sts PORTB_OUTSET, r17
 
         rjmp end
+    on:
+        sts PORTB_OUTCLR, r17
+      
+    
     end:
     // Write your code for Ex 4.6 above this line.
 
