@@ -194,8 +194,8 @@ main_loop:
     off:
         sts PORTB_DIRSET, r19
 
-        ret
-    
+        rjmp end
+    end:
     // Write your code for Ex 4.6 above this line.
 
 
