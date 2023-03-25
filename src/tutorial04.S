@@ -75,7 +75,7 @@ rcall some_procedure_03
 init_led_dp:  
     ldi r17, 0b00100000
     sts PORTB_OUTSET, r17
-    sts PORTB_DIRSET, r17
+    //sts PORTB_DIRSET, r17
     ret
 
     // Write your code for Ex 4.2 above this line.
