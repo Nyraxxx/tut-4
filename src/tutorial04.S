@@ -147,10 +147,11 @@ some_loop:
 
 delay:
     ldi r17, 0xC7
-     dec r17
 
+    delayfunction::
+        dec r17
         cpi r16, 0 
-        brne delay
+        brne delayfunction
        
     ret
     // Write your code for Ex 4.5 above this line.
