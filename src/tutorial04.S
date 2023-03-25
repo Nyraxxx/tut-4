@@ -190,11 +190,12 @@ main_loop:
     rjmp on
     on:
         sts PORTB_DIRCLR, r19
+        ret
     off:
         sts PORTB_DIRSET, r19
 
-        rjmp end
-    end:
+        ret
+    
     // Write your code for Ex 4.6 above this line.
 
 
