@@ -177,7 +177,7 @@ main_loop:
 
 sts r19, PIN5_bm
     // Write your code for Ex 4.6 below this line.
-    cpi r16,0
+    cpi r16, 0
     brne on
 on:
     sts PORTB_DIRCLR, r19
