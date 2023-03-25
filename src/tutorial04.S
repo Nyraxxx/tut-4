@@ -44,7 +44,7 @@ some_label_07:
 end_ex40:
     call avremu_r16out
 
-
+rjmp some_label_05
 
     // Ex 4.1
     // 
@@ -57,7 +57,7 @@ end_ex40:
     // Write your code for Ex 4.1 above this line.
     lds r16, 0x3801
     call avremu_r16out
-
+    rcall some_procedure_03
 
 
     // Ex 4.2
