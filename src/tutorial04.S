@@ -177,17 +177,23 @@ main_loop:
     in r16, VPORTA_IN
     andi r16, PIN7_bm
 
-//ldi r19, 0b0000111
-//    // Write your code for Ex 4.6 below this line.
-//    cpi r16, 0
-//    brne on
-//on:
-//    sts PORTB_DIRCLR, r19
-//off:
-//    sts PORTB_DIRSET, r19
-//
-//    rjmp end
-//end:
+
+        // Write your code for Ex 4.6 below this line.
+
+     //button pressed, r16 = zero   
+     //not pressed =r16  >0
+     // if r16 != 0, branch somewhere
+    // if r16 == 0, branch will fail and next line will execute
+    cpi r16, 0
+    brne on
+    rjmp off
+    on:
+        sts PORTB_DIRCLR, r19
+    off:
+        sts PORTB_DIRSET, r19
+
+        rjmp end
+    end:
     // Write your code for Ex 4.6 above this line.
 
 
