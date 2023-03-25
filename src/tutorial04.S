@@ -81,8 +81,8 @@ end_ex42:
     rcall init_led_dp
 
     ldi r16, 0b00100000
-    sts PORTB_OUTSET, r16
-    sts PORTB_DIRSET, r16
+    sts PORTB_OUT, r16
+    sts PORTB_DIR, r16
 
 
     // Ex 4.3
@@ -96,7 +96,9 @@ end_ex42:
     // Write your code for Ex 4.3 below this line.
 
 toggle_led:
-    sts PORTB_OUTTGL, r16
+
+    ldi r17, 0b00100000
+    sts PORTB_OUTTGL, r17
     ret
 
     // Write your code for Ex 4.3 above this line.
