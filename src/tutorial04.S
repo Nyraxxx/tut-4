@@ -73,9 +73,9 @@ rcall some_procedure_03
     // Write your code for Ex 4.2 below this line.
 
 init_led_dp:  
-    ldi r16, 0b00100000
-    sts PORTB_OUT, r16
-    sts PORTB_DIR, r16
+    ldi r17, 0b00100000
+    sts PORTB_OUT, r17
+    sts PORTB_DIR, r17
     ret
 
     // Write your code for Ex 4.2 above this line.
@@ -175,17 +175,17 @@ main_loop:
     in r16, VPORTA_IN
     andi r16, PIN7_bm
 
-ldi r19, 0b0000111
-    // Write your code for Ex 4.6 below this line.
-    cpi r16, 0
-    brne on
-on:
-    sts PORTB_DIRCLR, r19
-off:
-    sts PORTB_DIRSET, r19
-
-    rjmp end
-end:
+//ldi r19, 0b0000111
+//    // Write your code for Ex 4.6 below this line.
+//    cpi r16, 0
+//    brne on
+//on:
+//    sts PORTB_DIRCLR, r19
+//off:
+//    sts PORTB_DIRSET, r19
+//
+//    rjmp end
+//end:
     // Write your code for Ex 4.6 above this line.
 
 
