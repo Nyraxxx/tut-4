@@ -148,7 +148,7 @@ some_loop:
 delay:
     ldi r17, 0xC7
 
-    delayfunction::
+    delayfunction:
         dec r17
         cpi r16, 0 
         brne delayfunction
