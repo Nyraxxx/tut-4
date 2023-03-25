@@ -189,10 +189,10 @@ main_loop:
     // if r16 == 0, branch will fail and next line will execute
     rjmp on
     on:
-        sts PORTB_DIRCLR, r19
+        sts PORTB_OUTCLR, r19
       
     off:
-        sts PORTB_DIRSET, r19
+        sts PORTB_OUTSET, r19
 
         rjmp end
     end:
