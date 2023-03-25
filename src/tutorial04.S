@@ -143,9 +143,10 @@ some_loop:
                   // We will call this procedure later in the programme.
 
     // Write your code for Ex 4.5 below this line.
-ldi r17, 0xC7
+
 
 delay:
+    ldi r17, 0xC7
      dec r17
 
         cpi r16, 0 
