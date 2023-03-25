@@ -182,7 +182,7 @@ main_loop:
 
      //button pressed, r16 = zero   
      //not pressed =r16  >0
-     
+    ldi r19, PIN5_bm
     cpi r16, 0
     brne off
     // if r16 != 0, branch somewhere
