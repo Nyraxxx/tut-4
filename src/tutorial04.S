@@ -182,11 +182,12 @@ main_loop:
 
      //button pressed, r16 = zero   
      //not pressed =r16  >0
-     // if r16 != 0, branch somewhere
-    // if r16 == 0, branch will fail and next line will execute
+     
     cpi r16, 0
-    brne on
-    rjmp off
+    brne off
+    // if r16 != 0, branch somewhere
+    // if r16 == 0, branch will fail and next line will execute
+    rjmp on
     on:
         sts PORTB_DIRCLR, r19
     off:
