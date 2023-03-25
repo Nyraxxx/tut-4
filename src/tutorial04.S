@@ -182,17 +182,17 @@ main_loop:
 
      //button pressed, r16 = zero   
      //not pressed =r16  >0
-    ldi r19, PIN5_bm
+    ldi r17, PIN5_bm
     cpi r16, 0
     brne off
     // if r16 != 0, branch somewhere
     // if r16 == 0, branch will fail and next line will execute
     rjmp on
     on:
-        sts PORTB_OUTSET, r19
+        sts PORTB_OUTCLR, r17
       
     off:
-        sts PORTB_OUTCLR, r19
+        sts PORTB_OUTSET, r17
 
         rjmp end
     end:
