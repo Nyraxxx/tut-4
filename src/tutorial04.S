@@ -74,8 +74,8 @@ rcall some_procedure_03
 
 init_led_dp:  
     ldi r17, 0b00100000
-    sts PORTB_OUT, r17
-    sts PORTB_DIR, r17
+    sts PORTB_OUTSET, r17
+    sts PORTB_DIRSET, r17
     ret
 
     // Write your code for Ex 4.2 above this line.
@@ -143,7 +143,7 @@ some_loop:
                   // We will call this procedure later in the programme.
 
     // Write your code for Ex 4.5 below this line.
-ldi r17, 0b11000111
+ldi r17, 0xC7
 
 delay:
      dec r17
