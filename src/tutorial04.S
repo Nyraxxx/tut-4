@@ -73,16 +73,16 @@ rcall some_procedure_03
     // Write your code for Ex 4.2 below this line.
 
 init_led_dp:  
-
+    ldi r16, 0b00100000
+    sts PORTB_OUT, r16
+    sts PORTB_DIR, r16
     ret
 
     // Write your code for Ex 4.2 above this line.
 end_ex42:
     rcall init_led_dp
 
-    ldi r16, 0b00100000
-    sts PORTB_OUT, r16
-    sts PORTB_DIR, r16
+    
 
 
     // Ex 4.3
@@ -143,8 +143,11 @@ some_loop:
                   // We will call this procedure later in the programme.
 
     // Write your code for Ex 4.5 below this line.
-
+ldi r17, 0b10000101
 delay:
+    dec r17
+    cpi r16, 0
+    brne some_loop
 
     ret
     
