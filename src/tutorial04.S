@@ -13,7 +13,7 @@ entry:
     // 
     // Write assembly code below to advance the program counter such that
     // the next instruction executed is the "mov r16, r13" instruction below.
-
+rjmp some_label_05
 
     // Write your code for Ex 4.0 above this line.
     
@@ -44,7 +44,7 @@ some_label_07:
 end_ex40:
     call avremu_r16out
 
-rjmp some_label_05
+
 
     // Ex 4.1
     // 
@@ -52,13 +52,13 @@ rjmp some_label_05
     // "include/preamble.S" assembler directive), there has been a number 
     // of procedures defined. Write assembly code below to call the procedure 
     // "some_procedure_03".
+rcall some_procedure_03
 
 
     // Write your code for Ex 4.1 above this line.
     lds r16, 0x3801
     call avremu_r16out
-    rcall some_procedure_03
-
+    
 
     // Ex 4.2
     // 
