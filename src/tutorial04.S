@@ -150,7 +150,7 @@ delay:
 
     delayfunction:
         dec r17
-        cpi r16, 0 
+        cpi r17, 0 
         brne delayfunction
        
     ret
