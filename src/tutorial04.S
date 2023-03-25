@@ -143,15 +143,15 @@ some_loop:
                   // We will call this procedure later in the programme.
 
     // Write your code for Ex 4.5 below this line.
-ldi r17, 1b0001000
+ldi r17, 1b1000111
 
 delay:
-    dec r17
-    cpi r16, 0
-    brne delay
+     dec r17
 
+        cpi r16, 0 
+        brne delay_loop
+       
     ret
-    
     // Write your code for Ex 4.5 above this line.
 end_ex45:
     call flash_led
@@ -175,9 +175,17 @@ main_loop:
     in r16, VPORTA_IN
     andi r16, PIN7_bm
 
+sts r19, PIN5_bm
     // Write your code for Ex 4.6 below this line.
+    cpi r16,0
+    brne on
+on:
+    sts PORTB_DIRCLR, r19
+off:
+    sts PORTB_DIRSET, r19
 
-
+    rjmp end
+end:
     // Write your code for Ex 4.6 above this line.
 
 
