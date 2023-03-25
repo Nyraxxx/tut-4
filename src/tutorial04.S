@@ -143,13 +143,13 @@ some_loop:
                   // We will call this procedure later in the programme.
 
     // Write your code for Ex 4.5 below this line.
-ldi r17, 1b1000111
+ldi r17, 0b11000111
 
 delay:
      dec r17
 
         cpi r16, 0 
-        brne delay_loop
+        brne delay
        
     ret
     // Write your code for Ex 4.5 above this line.
@@ -175,7 +175,7 @@ main_loop:
     in r16, VPORTA_IN
     andi r16, PIN7_bm
 
-sts r19, PIN5_bm
+ldi r19, 0b0000111
     // Write your code for Ex 4.6 below this line.
     cpi r16, 0
     brne on
